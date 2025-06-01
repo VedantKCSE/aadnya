@@ -6,8 +6,8 @@ import logo from "../img/logo.png";
 import downArrow from "../img/arrow.png"; // Assuming you have a down arrow image
 import { Link } from "react-router-dom";
 import "./css/homeAbout.css"; // Import the CSS for the home page
-import { Heart, HelpingHand, School } from "lucide-react";
 import "./css/homeMisson.css"; // Import the CSS for the mission section
+import { Heart, HelpingHand, School } from "lucide-react";
 
 const emojis = ["💖", "❤️", "₹", "💰", "🌟", "🙏", "🤝", "🌍", "🎗️", "✨"];
 const programs = [
@@ -67,7 +67,7 @@ const Home = () => {
 
   return (
     <div className="home_container">
-      <div className="banner">
+      <section className="banner">
         <FloatingEmojis />
 
         <div className="carousel">
@@ -78,45 +78,49 @@ const Home = () => {
                 index === currentIndex ? "active" : ""
               }`}
             >
-              <img src={item} alt={`carousel-${index}`} />
+              <img src={item} alt={`Slide ${index + 1}`} />
             </div>
           ))}
         </div>
 
-        <div className="banner_content">
-          <img src={logo} alt="Logo" className="banner_logo" />
+        <header className="banner_content">
+          <figure>
+            <img src={logo} alt="Organization Logo" className="banner_logo" />
+          </figure>
+
+          <h2 className="tagline">Give hope. Create change.</h2>
 
           <h1 className="banner_heading">
-            <span>CHARITY </span> DOESN'T <span>DECREASE </span> WEALTH
+            <span>CHARITY</span> DOESN'T <span>DECREASE</span> WEALTH
           </h1>
 
           <p>
-            "Charity is not about giving what you have left over, it's about
+            "Charity is not about giving what you have left over; it’s about
             sharing what you have with those who need it most."
           </p>
 
-          <div className="buttons">
+          <nav className="buttons" aria-label="Call to action">
             <button
               className="btn btn-primary attention"
-              aria-label="Donate Now"
+              aria-label="Donate Now - help those in need"
             >
               💖 Donate Now 🌟
             </button>
             <button
               className="btn btn-secondary"
-              aria-label="Register as Volunteer"
+              aria-label="Join as Volunteer"
             >
-              Register as Volunteer
+              🙌 Register as Volunteer
             </button>
-          </div>
-        </div>
-        {/* down arrow */}
-        <div className="down_arrow">
-          <a href="#about">
-            <img src={downArrow} alt="Down Arrow" className="arrow_icon" />
+          </nav>
+        </header>
+
+        <div className="down_arrow" aria-hidden="true">
+          <a href="#about" aria-label="Scroll to About Section">
+            <img src={downArrow} alt="" className="arrow_icon" />
           </a>
         </div>
-      </div>
+      </section>
 
       <section className="mission-section" id="about">
         <div className="mission-container">
