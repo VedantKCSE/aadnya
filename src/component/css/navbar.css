@@ -1,0 +1,144 @@
+.Navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 90%;
+    max-width: 1200px;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 14px 32px;
+    border-radius: 50px;
+    margin: 20px auto;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    backdrop-filter: blur(12px);
+    border: 2px solid rgb(147, 146, 146);
+    height: 70px;
+}
+
+.Navbar .logo {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.Navbar .logo img {
+    width: 40px;
+    height: 40px;
+    margin-right: 12px;
+}
+
+.Navbar .logo h3 {
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #3786b6;
+    letter-spacing: 1px;
+}
+
+.Navbar .logo h3 span {
+    color: #a22a88;
+    font-weight: 900;
+}
+
+.Navbar .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.Navbar .nav-links a {
+    position: relative;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #3786b6;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    padding: 8px;
+    font-family: 'Poppins', 'League Spartan', sans-serif;
+    letter-spacing: 0.05em;
+}
+
+.Navbar .nav-links a:hover {
+    color: #a22a88;
+    transform: scale(1.05);
+}
+
+.Navbar .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    height: 2px;
+    width: 0%;
+    background-color: #a22a88;
+    transition: width 0.3s ease;
+}
+
+.Navbar .nav-links a:hover::after,
+.Navbar .nav-links a.active::after {
+    width: 100%;
+}
+
+.Navbar .nav-links a.active {
+    color: #a22a88;
+    font-weight: 700;
+}
+
+/* Hamburger style */
+.hamburger {
+    display: none;
+    font-size: 1.8rem;
+    color: #3786b6;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+/* RESPONSIVE STYLES */
+@media (max-width: 768px) {
+    .Navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 95%;
+        align-items: center;
+        align-items: flex-start;
+        padding: 16px 20px;
+        height: auto;
+        border-radius: 24px;
+    }
+
+    .Navbar .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+        margin-top: 12px;
+    }
+
+    .Navbar .nav-links.open {
+        display: flex;
+    }
+
+    .Navbar .nav-links a {
+        padding: 10px 0;
+        width: 100%;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .hamburger {
+
+        display: block;
+        align-self: flex-end;
+
+    }
+}
+.Navbar .top-row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
