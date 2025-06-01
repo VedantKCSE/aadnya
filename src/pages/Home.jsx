@@ -127,16 +127,18 @@ const Home = () => {
           <div className="mission-header">
             <h2 className="mission-title">Our Mission</h2>
             <p className="mission-description">
-              To provide comprehensive support to orphans, people with
-              disabilities, and the needy across Maharashtra, creating a more
-              inclusive and compassionate society.
+              Empowering orphans, individuals with disabilities, and underserved
+              communities across Maharashtra by fostering inclusion, dignity,
+              and opportunity.
             </p>
           </div>
 
           <div className="mission-grid">
             {programs.map((program, index) => (
               <div key={index} className="mission-card">
-                <div className="mission-icon">{program.icon}</div>
+                <div className="mission-icon-wrapper">
+                  <div className="mission-icon">{program.icon}</div>
+                </div>
                 <h3 className="mission-card-title">{program.title}</h3>
                 <p className="mission-card-description">
                   {program.description}

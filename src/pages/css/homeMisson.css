@@ -1,5 +1,5 @@
 .mission-section {
-    padding: 4rem 0;
+    padding: 5rem 0;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e7eb;
 }
@@ -7,34 +7,45 @@
 .mission-container {
     max-width: 1280px;
     margin: 0 auto;
-    padding: 0 1rem;
+    padding: 0 1.5rem;
 }
 
 .mission-header {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     animation: fadeIn 1s ease-in-out;
 }
 
 .mission-title {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #3786b6;
-    /* text-gray-900 */
+    font-size: 2.75rem;
+    font-weight: 800;
+    color: #3786b6; /* Rich blue */
+    /* Rich blue */
     margin-bottom: 1rem;
+    letter-spacing: -0.5px;
+}
+
+.mission-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background-color: #3786b6; /* Rich purple */
+    margin: 0.5rem auto;
+    border-radius: 2px;
 }
 
 .mission-description {
     font-size: 1.125rem;
-    color: #4b5563;
-    /* text-gray-600 */
+    color: #6b7280;
     max-width: 768px;
     margin: 0 auto;
+    line-height: 1.8;
 }
 
 .mission-grid {
     display: grid;
-    gap: 2rem;
+    gap: 2.5rem;
     grid-template-columns: 1fr;
 }
 
@@ -45,37 +56,55 @@
 }
 
 .mission-card {
-    padding: 2rem;
+    padding: 2.5rem 2rem;
     border-radius: 1rem;
     background-color: #f9fafb;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: fadeInUp 0.6s ease forwards;
+    border: 1px solid #e5e7eb;
 }
 
 .mission-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.mission-icon-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
 }
 
 .mission-icon {
-    margin-bottom: 1rem;
-    transition: transform 0.3s ease;
+    color: #2563eb;
+    font-size: 2rem;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .mission-card:hover .mission-icon {
-    transform: scale(1.1);
+    transform: scale(1.2) rotate(6deg);
+    color: #1d4ed8;
 }
 
 .mission-card-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+    color: #1f2937;
 }
 
 .mission-card-description {
     font-size: 1rem;
     color: #4b5563;
+    line-height: 1.7;
 }
 
 @keyframes fadeIn {
@@ -85,6 +114,18 @@
     }
 
     to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
         opacity: 1;
         transform: translateY(0);
     }
