@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./css/navbar.css";
 import logo from "../img/logo without text.png";
 import { FaBars, FaTimes } from "react-icons/fa";
@@ -12,7 +13,6 @@ const Navbar = () => {
 
   return (
     <nav className="Navbar">
-      {/* Top Row: Logo + Hamburger */}
       <div className="top-row">
         <div className="logo">
           <img src={logo} alt="Logo" />
@@ -21,26 +21,53 @@ const Navbar = () => {
           </h3>
         </div>
 
-        {/* Hamburger icon */}
         <div className="hamburger" onClick={toggleMenu}>
           {isOpen ? <FaTimes size={22} /> : <FaBars size={22} />}
         </div>
       </div>
 
-      {/* Navigation links */}
       <div className={`nav-links ${isOpen ? "open" : ""}`}>
-        <a href="/" className="active" onClick={() => setIsOpen(false)}>
+        {/* <Link to="/" className="active" onClick={() => setIsOpen(false)}>
           Home
-        </a>
-        <a href="/about" onClick={() => setIsOpen(false)}>
+        </Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}>
           About
-        </a>
-        <a href="/contact" onClick={() => setIsOpen(false)}>
+        </Link>
+        <Link to="/contact" onClick={() => setIsOpen(false)}>
           Contact
-        </a>
-        <a href="/services" onClick={() => setIsOpen(false)}>
+        </Link>
+        <Link to="/services" onClick={() => setIsOpen(false)}>
           Services
-        </a>
+        </Link> */}
+
+        {/* <Route path="/about" element={<About />} />
+        <Route path="/programs" element={<Programs />} />
+        <Route path="/supported-by" element={<SupportedBy />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/donate" element={<Donate />} />
+        <Route path="/contact" element={<Contact />} />
+ */}
+        <Link to="/" className="active" onClick={() => setIsOpen(false)}>
+          Home
+        </Link>
+        <Link to="/about" onClick={() => setIsOpen(false)}>
+          About
+        </Link>
+        <Link to="/programs" onClick={() => setIsOpen(false)}>
+          Programs
+        </Link>
+        <Link to="/supported-by" onClick={() => setIsOpen(false)}>
+          Supported By
+        </Link>
+        <Link to="/register" onClick={() => setIsOpen(false)}>
+          Register
+        </Link>
+        <Link to="/donate" onClick={() => setIsOpen(false)}>
+          Donate
+        </Link>
+        <Link to="/contact" onClick={() => setIsOpen(false)}>
+          Contact
+        </Link>
       </div>
     </nav>
   );
