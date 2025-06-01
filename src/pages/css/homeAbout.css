@@ -1,14 +1,10 @@
 .impact-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     padding: 4rem 0;
     background: #fff;
-    /* from-primary/5 to-secondary/5 */
     border-bottom: 1px solid #e5e7eb;
-}
-
-.impact-container {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 0 1rem;
 }
 
 .impact-content {
@@ -16,20 +12,12 @@
     animation: fadeIn 1s ease-in-out;
 }
 
-.impact-heading {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #1f2937;
-    /* text-gray-900 */
-    margin-bottom: 2rem;
-    color: #3786b6;
-}
-
 .impact-grid {
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr;
     margin-bottom: 3rem;
+    padding: 0 1rem;
 }
 
 @media (min-width: 768px) {
@@ -39,31 +27,56 @@
 }
 
 .impact-stat {
-    text-align: center;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05);
+    padding: 2rem 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
 }
 
-.impact-number {
+.impact-stat:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.impact-icon {
     font-size: 2rem;
-    font-weight: bold;
     margin-bottom: 0.5rem;
 }
 
-.primary {
-    color: #1d4ed8;
-}
-
-.secondary {
-    color: #f59e0b;
-}
-
-.accent {
-    color: #8e2273;
+.impact-number {
+    font-size: 2.25rem;
+    font-weight: bold;
+    margin-bottom: 0.25rem;
 }
 
 .impact-label {
     color: #4b5563;
-    /* text-gray-600 */
+    font-size: 1rem;
 }
+
+.impact-heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #3786b6;
+    margin-bottom: 2.5rem;
+}
+
+.impact-heading::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 4px;
+    background-color: #3786b6;
+    margin: 1rem auto 0;
+}
+
+.impact-heading span {
+    color: #8e2273; /* Rich purple */
+}
+
+
 
 .impact-quote-box {
     background: white;
@@ -72,14 +85,23 @@
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     max-width: 768px;
     margin: 0 auto;
+    position: relative;
 }
 
 .impact-quote {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-style: italic;
     color: #374151;
-    /* text-gray-700 */
     margin-bottom: 1rem;
+    line-height: 1.6;
+    position: relative;
+}
+
+.quote-icon {
+    font-size: 2rem;
+    color: #8e2273;
+    margin-right: 0.25rem;
+    vertical-align: top;
 }
 
 .impact-message {
@@ -97,20 +119,25 @@
     border: none;
     border-radius: 0.5rem;
     background-color: #8e2273;
-    /* accent */
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .impact-button:hover {
     background-color: #6b1a5c;
+    transform: scale(1.05);
 }
 
-@keyframes fadeIn {
+.fade-in-card {
+    animation: fadeInUp 1s ease forwards;
+    opacity: 0;
+}
+
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: translateY(10px);
+        transform: translateY(20px);
     }
 
     to {

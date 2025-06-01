@@ -5,8 +5,8 @@ import carosal2 from "../img/carosal2.jpeg";
 import logo from "../img/logo.png";
 import downArrow from "../img/arrow.png"; // Assuming you have a down arrow image
 import { Link } from "react-router-dom";
-import "./css/homeAbout.css"; // Import the CSS for the home page
 import "./css/homeMisson.css"; // Import the CSS for the mission section
+import "./css/homeAbout.css"; // Import the CSS for the home page
 import { Heart, HelpingHand, School } from "lucide-react";
 
 const emojis = ["💖", "❤️", "₹", "💰", "🌟", "🙏", "🤝", "🌍", "🎗️", "✨"];
@@ -116,8 +116,11 @@ const Home = () => {
         </header>
 
         <div className="down_arrow" aria-hidden="true">
-          <a href="#about" aria-label="Scroll to About Section">
+          {/* <a href="#about" aria-label="Scroll to About Section">
             <img src={downArrow} alt="" className="arrow_icon" />
+          </a> */}
+          <a href="#about" className="down_arrow" aria-label="Scroll to About Section">
+            <img src={downArrow} alt="Scroll Down" className="arrow_icon" />
           </a>
         </div>
       </section>
@@ -125,7 +128,9 @@ const Home = () => {
       <section className="mission-section" id="about">
         <div className="mission-container">
           <div className="mission-header">
-            <h2 className="mission-title">Our Mission</h2>
+            <h2 className="mission-title">
+              Our <span>Mission</span>
+            </h2>
             <p className="mission-description">
               Empowering orphans, individuals with disabilities, and underserved
               communities across Maharashtra by fostering inclusion, dignity,
@@ -152,18 +157,25 @@ const Home = () => {
       <section className="impact-section">
         <div className="impact-container">
           <div className="impact-content">
-            <h2 className="impact-heading">Your Support Makes a Difference</h2>
+            <h2 className="impact-heading">
+              Your
+              <span> Support </span>
+              Makes a Difference
+            </h2>
 
             <div className="impact-grid">
-              <div className="impact-stat">
+              <div className="impact-stat fade-in-card">
+                <div className="impact-icon">📅</div>
                 <div className="impact-number primary">2023</div>
                 <div className="impact-label">Established</div>
               </div>
-              <div className="impact-stat">
+              <div className="impact-stat fade-in-card">
+                <div className="impact-icon">👥</div>
                 <div className="impact-number secondary">100+</div>
                 <div className="impact-label">Lives Impacted</div>
               </div>
-              <div className="impact-stat">
+              <div className="impact-stat fade-in-card">
+                <div className="impact-icon">⏰</div>
                 <div className="impact-number accent">24/7</div>
                 <div className="impact-label">Support Available</div>
               </div>
@@ -171,8 +183,10 @@ const Home = () => {
 
             <div className="impact-quote-box">
               <blockquote className="impact-quote">
-                "He/she just needs to feel that there is someone who shows
-                concern towards them"
+                <span className="quote-icon">❝</span>
+                He/she just needs to feel that there is someone who shows
+                concern towards them
+                <span className="quote-icon">❞</span>
               </blockquote>
               <p className="impact-message">
                 Your support can turn loneliness into a story of hope and love

@@ -35,6 +35,10 @@
     border-radius: 2px;
 }
 
+.mission-title span {
+    color: #a22a88; /* Rich purple */
+}
+
 .mission-description {
     font-size: 1.125rem;
     color: #6b7280;
