@@ -2,7 +2,9 @@
     width: 8px;
     height: 8px;
 }
+
+/*  a22a88 and  */
 ::-webkit-scrollbar-thumb {
-    background-color: #a22a88;
+    background: linear-gradient(45deg, #3786b6, #8e2273);
     border-radius: 4px;
 }
