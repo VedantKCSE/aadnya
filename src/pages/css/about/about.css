@@ -6,7 +6,7 @@
     min-height: 100vh;
     padding: 40px 20px;
     background: #fff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     color: #444;
     border-bottom: 1px solid #e5e7eb;
 }
@@ -90,11 +90,14 @@
 }
 
 .about-content p {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     color: #555;
     font-weight: 600;
     margin: 0;
+    /* justify text an center it */
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 /* Responsive tweaks */
@@ -104,7 +107,7 @@
     }
 
     .about-content p {
-        font-size: 1.4rem;
+        font-size: 1.0rem;
         padding: 0 10px;
     }
 

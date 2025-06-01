@@ -84,9 +84,6 @@ const Home = () => {
         </div>
 
         <header className="banner_content">
-          <figure>
-            <img src={logo} alt="Organization Logo" className="banner_logo" />
-          </figure>
 
           <h2 className="tagline">Give hope. Create change.</h2>
 

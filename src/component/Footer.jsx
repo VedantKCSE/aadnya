@@ -66,8 +66,16 @@ const Footer = () => {
         <div className="footer-bottom">
           <p>&copy; 2024 Aadnya Foundation Trust. All rights reserved.</p>
           <p>
-            "When we give cheerfully and accept gratefully, everyone is
-            blessed."
+            Design & Developed With ❤️ By{" "}
+            <a
+              href="https://origin7.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-link"
+            >
+              Origin7 Technologies
+            </a>
+            <span className="footer-dot"> - Pavan</span>
           </p>
         </div>
       </div>

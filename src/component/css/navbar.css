@@ -1,7 +1,7 @@
 /* Floating Navbar */
 .floating-navbar {
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
