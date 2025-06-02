@@ -24,13 +24,14 @@ const Navbar = () => {
   return (
     <nav className="floating-navbar">
       <div className="nav-container">
-        <div className="nav-logo" onClick={closeMenu}>
-          <img src={logo} alt="Logo" />
-          <h3>
-            AADNYA <span>FOUNDATION</span>
-          </h3>
-        </div>
-
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <div className="nav-logo" onClick={closeMenu}>
+            <img src={logo} alt="Logo" />
+            <h3>
+              AADNYA <span>FOUNDATION</span>
+            </h3>
+          </div>
+        </Link>
         <div className="nav-toggle" onClick={toggleMenu}>
           {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
         </div>
