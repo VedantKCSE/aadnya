@@ -1,0 +1,158 @@
+.programs-container {
+  padding-top: 80px;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #f5f5f5, #fafafa);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  color: #555;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.programs-grid-section {
+  background: #fff;
+  padding: 60px 20px;
+}
+
+.programs-grid {
+  display: grid;
+  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.program-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 24px;
+  transition: all 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+}
+
+.program-icon svg {
+  height: 40px;
+  width: 40px;
+  color: #e63946;
+  margin-bottom: 10px;
+}
+
+.program-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.program-description {
+  font-size: 15px;
+  color: #555;
+  margin-bottom: 16px;
+}
+
+.program-highlights h4 {
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.program-highlights ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.program-highlights li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #444;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  background-color: #007bff;
+  border-radius: 50%;
+  margin-right: 8px;
+  flex-shrink: 0;
+}
+
+.cta-section {
+  background: linear-gradient(90deg, #f2f2f2, #f9f9f9);
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.cta-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.cta-text {
+  font-size: 16px;
+  color: #666;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+}
+
+.cta-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .cta-buttons {
+    flex-direction: row;
+  }
+}
+
+.btn {
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.primary-btn {
+  background-color: #e63946;
+  color: white;
+}
+
+.primary-btn:hover {
+  background-color: #d62839;
+}
+
+.outline-btn {
+  border: 2px solid #e63946;
+  color: #e63946;
+}
+
+.outline-btn:hover {
+  background-color: #e63946;
+  color: white;
+}

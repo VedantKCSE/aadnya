@@ -1,0 +1,99 @@
+.donation_form {
+    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    max-width: 540px;
+    margin: 2rem auto;
+    transition: all 0.3s ease-in-out;
+}
+
+.donation_form h2 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.donation_form span{
+    color: #3786b6;
+}
+
+.amount_selection {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.amount_btn {
+    padding: 12px 24px;
+    border: 2px solid #3786b6;
+    background: white;
+    color: #3786b6;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s ease;
+    font-size: 15px;
+}
+
+.amount_btn.selected,
+.amount_btn:hover {
+    background: #3786b6;
+    color: white;
+    transform: scale(1.05);
+}
+
+.custom_amount_input input {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    transition: border 0.3s ease;
+}
+
+.custom_amount_input input:focus {
+    border-color: #3786b6;
+    outline: none;
+}
+
+.donation_details input,
+.donation_details textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 12px;
+    border-radius: 8px;
+    border: 1.5px solid #ccc;
+    font-size: 15px;
+    transition: border 0.3s ease;
+}
+
+.donation_details input:focus,
+.donation_details textarea:focus {
+    border-color: #8e2273;
+    outline: none;
+}
+
+.donation_details button {
+    margin-top: 20px;
+    padding: 14px;
+    width: 100%;
+    border: none;
+    border-radius: 50px;
+    background-image: linear-gradient(to right, #8e2273, #c346a1);
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.4s ease;
+    box-shadow: 0 4px 10px rgba(142, 34, 115, 0.3);
+}
+
+.donation_details button:hover {
+    background-image: linear-gradient(to right, #6d1b5b, #a33a89);
+    transform: translateY(-2px);
+}
