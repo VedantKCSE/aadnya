@@ -2,6 +2,9 @@
     width: 8px;
     height: 8px;
 }
+html {
+    scroll-behavior: smooth;
+}
 
 /*  a22a88 and  */
 ::-webkit-scrollbar-thumb {

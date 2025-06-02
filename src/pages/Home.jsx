@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./css/banner.css";
 import carosal1 from "../img/carosal1.jpeg";
 import carosal2 from "../img/carosal2.jpeg";
@@ -8,6 +8,7 @@ import { Link } from "react-router-dom";
 import "./css/homeMisson.css"; // Import the CSS for the mission section
 import "./css/homeAbout.css"; // Import the CSS for the home page
 import { Heart, HelpingHand, School } from "lucide-react";
+import "./css/home.css"; // Import the main CSS for the home page
 
 const emojis = ["💖", "❤️", "₹", "💰", "🌟", "🙏", "🤝", "🌍", "🎗️", "✨"];
 const programs = [
@@ -52,6 +53,38 @@ const FloatingEmojis = () => {
   );
 };
 
+const FadeInSection = ({ children }) => {
+  const domRef = useRef();
+  const [isVisible, setVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setVisible(true);
+          observer.unobserve(entry.target); // Animate once
+        }
+      });
+    });
+
+    const current = domRef.current;
+    if (current) observer.observe(current);
+
+    return () => {
+      if (current) observer.unobserve(current);
+    };
+  }, []);
+
+  return (
+    <div
+      className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+      ref={domRef}
+    >
+      {children}
+    </div>
+  );
+};
+
 const Home = () => {
   const items = [carosal1, carosal2];
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -84,7 +117,6 @@ const Home = () => {
         </div>
 
         <header className="banner_content">
-
           <h2 className="tagline">Give hope. Create change.</h2>
 
           <h1 className="banner_heading">
@@ -116,41 +148,45 @@ const Home = () => {
           {/* <a href="#about" aria-label="Scroll to About Section">
             <img src={downArrow} alt="" className="arrow_icon" />
           </a> */}
-          <a href="#about" className="down_arrow" aria-label="Scroll to About Section">
+          <a
+            href="#about"
+            className="down_arrow"
+            aria-label="Scroll to About Section"
+          >
             <img src={downArrow} alt="Scroll Down" className="arrow_icon" />
           </a>
         </div>
       </section>
+      <FadeInSection>
+        <section className="mission-section" id="about">
+          <div className="mission-container">
+            <div className="mission-header">
+              <h2 className="mission-title">
+                Our <span>Mission</span>
+              </h2>
+              <p className="mission-description">
+                Empowering orphans, individuals with disabilities, and
+                underserved communities across Maharashtra by fostering
+                inclusion, dignity, and opportunity.
+              </p>
+            </div>
 
-      <section className="mission-section" id="about">
-        <div className="mission-container">
-          <div className="mission-header">
-            <h2 className="mission-title">
-              Our <span>Mission</span>
-            </h2>
-            <p className="mission-description">
-              Empowering orphans, individuals with disabilities, and underserved
-              communities across Maharashtra by fostering inclusion, dignity,
-              and opportunity.
-            </p>
-          </div>
-
-          <div className="mission-grid">
-            {programs.map((program, index) => (
-              <div key={index} className="mission-card">
-                <div className="mission-icon-wrapper">
-                  <div className="mission-icon">{program.icon}</div>
+            <div className="mission-grid">
+              {programs.map((program, index) => (
+                <div key={index} className="mission-card">
+                  <div className="mission-icon-wrapper">
+                    <div className="mission-icon">{program.icon}</div>
+                  </div>
+                  <h3 className="mission-card-title">{program.title}</h3>
+                  <p className="mission-card-description">
+                    {program.description}
+                  </p>
                 </div>
-                <h3 className="mission-card-title">{program.title}</h3>
-                <p className="mission-card-description">
-                  {program.description}
-                </p>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
-
+        </section>
+      </FadeInSection>
       <section className="impact-section">
         <div className="impact-container">
           <div className="impact-content">
@@ -161,23 +197,30 @@ const Home = () => {
             </h2>
 
             <div className="impact-grid">
-              <div className="impact-stat fade-in-card">
-                <div className="impact-icon">📅</div>
-                <div className="impact-number primary">2023</div>
-                <div className="impact-label">Established</div>
-              </div>
-              <div className="impact-stat fade-in-card">
-                <div className="impact-icon">👥</div>
-                <div className="impact-number secondary">100+</div>
-                <div className="impact-label">Lives Impacted</div>
-              </div>
-              <div className="impact-stat fade-in-card">
-                <div className="impact-icon">⏰</div>
-                <div className="impact-number accent">24/7</div>
-                <div className="impact-label">Support Available</div>
-              </div>
+              <FadeInSection>
+                <div className="impact-stat fade-in-card">
+                  <div className="impact-icon">📅</div>
+                  <div className="impact-number primary">2023</div>
+                  <div className="impact-label">Established</div>
+                </div>
+              </FadeInSection>
+              <FadeInSection>
+                <div className="impact-stat fade-in-card">
+                  <div className="impact-icon">👥</div>
+                  <div className="impact-number secondary">100+</div>
+                  <div className="impact-label">Lives Impacted</div>
+                </div>
+              </FadeInSection>
+              <FadeInSection>
+                <div className="impact-stat fade-in-card">
+                  <div className="impact-icon">⏰</div>
+                  <div className="impact-number accent">24/7</div>
+                  <div className="impact-label">Support Available</div>
+                </div>
+              </FadeInSection>
             </div>
 
+            <FadeInSection>
             <div className="impact-quote-box">
               <blockquote className="impact-quote">
                 <span className="quote-icon">❝</span>
@@ -193,6 +236,7 @@ const Home = () => {
                 Learn More About Us
               </Link>
             </div>
+            </FadeInSection>
           </div>
         </div>
       </section>
