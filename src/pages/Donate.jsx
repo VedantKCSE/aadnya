@@ -1,15 +1,32 @@
-import React from 'react'
-import './css/Donate.css'
+import React from "react";
+import "./css/Donate.css";
+import "./css/about/undermaintainance.css"; // Importing the CSS for the under maintenance section
 
 const Donate = () => {
   return (
-    <div>
-        <h1>Donate</h1>
-        <p>This page is under construction.</p>
-        <p>We are working on providing a donation system for our users.</p>
-        <p>Stay tuned for updates!</p>
+    <div className="coming-soon">
+      <p>Coming Soon...</p>
+      <p>Under Maintenance</p>
+      <p>
+        We are working hard to bring you the best donation experience. Stay
+        tuned!
+      </p>
+      <p>
+        In the meantime, you can support us by spreading the word about our
+        cause and sharing our mission with your friends and family.
+      </p>
+      <p>
+        If you have any questions or would like to get involved, please contact
+        us at <a href="mailto: info@yourdomain.com">
+          info@yourdomain.com
+        </a>
+      </p>
+      <p>
+        Thank you for your patience and support! Together, we can make a
+        difference.
+        </p>
     </div>
-  )
-}
+  );
+};
 
-export default Donate
+export default Donate;
