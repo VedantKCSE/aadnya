@@ -1,0 +1,144 @@
+.upi_and_bank_transfer {
+    width: 50%;
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.upi_and_bank_transfer .upi {
+    width: 100%;
+    max-width: 440px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.upi_and_bank_transfer .qr {
+    width: 100%;
+    max-width: 440px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.upi_and_bank_transfer .upi .qr img {
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.upi_and_bank_transfer .upi h2 {
+    color: #3786b6;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.9rem;
+}
+
+.upi_and_bank_transfer .upi p {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+}
+
+.upi_and_bank_transfer .upi p span {
+    color: #3786b6;
+    font-weight: bold;
+}
+
+/* responsiv */
+@media only screen and (max-width: 768px) {
+    .upi_and_bank_transfer {
+        width: 100%;
+        padding: 0 !important;
+    }
+
+    .upi_and_bank_transfer .upi,
+    .upi_and_bank_transfer .qr {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+.bank_transfer {
+    width: 100%;
+    max-width: 440px;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.bank_transfer h2 {
+    color: #3786b6;
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 1.9rem;
+}
+
+.bank_transfer p {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+}
+
+/* table tag */
+.bank_transfer table {
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    /* border radius */
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.bank_transfer table th,
+.bank_transfer table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* .bank_transfer table th {
+    background-color: #3786b6;
+    color: white;
+} */
+/* there is  no th i want first column color too primary one */
+.bank_transfer table tr:first-child td {
+    background-color: #3786b6;
+    color: white;
+    font-weight: bold;
+}
+
+/* responsive */
+
+@media only screen and (max-width: 768px) {
+    .bank_transfer {
+        width: 100%;
+    }
+}

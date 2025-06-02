@@ -1,22 +1,40 @@
+
 .donation_form {
-    background: linear-gradient(145deg, #ffffff, #f0f0f0);
+    width: 100%;
+    background:#fff;
     padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
     max-width: 540px;
-    margin: 2rem auto;
+    /* margin: 2rem auto; */
     transition: all 0.3s ease-in-out;
+    font-family: 'Segoe UI', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px 30px;
+}
+
+.donation_form img{
+    width: 110px;
 }
 
 .donation_form h2 {
     color: #2c3e50;
     text-align: center;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.9rem;
 }
 
-.donation_form span{
+.donation_form span {
     color: #3786b6;
+}
+
+.donation_form p {
+    text-align: center;
+    color: #555;
+    font-size: 15px;
+    margin-bottom: 1.2rem;
 }
 
 .amount_selection {
@@ -46,10 +64,17 @@
     transform: scale(1.05);
 }
 
+.custom_amount_input label {
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 6px;
+}
+
 .custom_amount_input input {
     width: 100%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 10px 0 20px;
     border-radius: 8px;
     border: 1.5px solid #ccc;
     font-size: 15px;
@@ -70,6 +95,12 @@
     border: 1.5px solid #ccc;
     font-size: 15px;
     transition: border 0.3s ease;
+}
+
+.donation_details textarea {
+    height: 100px;
+    resize: vertical;
+    resize: none;
 }
 
 .donation_details input:focus,
@@ -96,4 +127,11 @@
 .donation_details button:hover {
     background-image: linear-gradient(to right, #6d1b5b, #a33a89);
     transform: translateY(-2px);
+}
+
+.secure_note {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #555;
+    text-align: center;
 }
