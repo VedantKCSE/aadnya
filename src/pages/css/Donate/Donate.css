@@ -37,15 +37,19 @@
 }
 
 .donate_container .quote {
+    font-size: 1.5rem;
     width: 100%;
-    max-width: 800px;
-    text-align: center;
-    margin: 20px auto;
+    max-width: 1200px;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .donate_container .quote h2 {
@@ -54,17 +58,27 @@
     color: #333;
 }
 
-.donate_container .quote p {
+.donate_container .quote .quote_paragraph {
     font-size: 1.1rem;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.6;
     color: #3786b6;
-    margin: 10px 0;
-    font-weight: bolder;
+    font-style: italic;
+    font-weight: bold;
 }
 
 /* responsive */
 @media (max-width: 768px) {
+    .donate_container .donate_header {
+        height: auto;
+        padding: 20px 10px;
+        margin-top: 120px;
+    }
+
     .donate_container .donate_header h1 {
         font-size: 2rem;
+        margin-top: 120px;
     }
 
     .donate_container .donate_header p {
@@ -182,4 +196,13 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 30px;
+}
+
+
+@media only screen and (max-width: 768px) {
+    .donate_container .donate_header {
+        height: auto;
+        padding: 20px 10px;
+        margin-top: 232px;
+    }
 }

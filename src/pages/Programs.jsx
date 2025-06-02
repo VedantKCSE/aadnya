@@ -64,16 +64,7 @@ const Programs = () => {
               <div className="program-icon">{program.icon}</div>
               <h3 className="program-title">{program.title}</h3>
               <p className="program-description">{program.description}</p>
-              <div className="program-highlights">
-                <h4>Key Features:</h4>
-                <ul>
-                  {program.highlights.map((highlight, idx) => (
-                    <li key={idx}>
-                      <span className="bullet"></span> {highlight}
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              
             </div>
           ))}
         </div>

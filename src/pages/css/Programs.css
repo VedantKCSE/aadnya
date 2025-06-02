@@ -1,7 +1,5 @@
 .programs-container {
-  padding-top: 80px;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
 }
 
 .hero-section {
@@ -14,7 +12,7 @@
   font-size: 36px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #222;
+  color: #3786b6;
 }
 
 .hero-subtitle {
@@ -40,20 +38,20 @@
 .program-card {
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 24px;
   transition: all 0.3s ease;
 }
 
 .program-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .program-icon svg {
   height: 40px;
   width: 40px;
-  color: #e63946;
+  color: #8e2273;
   margin-bottom: 10px;
 }
 
@@ -91,7 +89,7 @@
 .bullet {
   width: 6px;
   height: 6px;
-  background-color: #007bff;
+  background-color: #3786b6;
   border-radius: 50%;
   margin-right: 8px;
   flex-shrink: 0;
@@ -107,6 +105,7 @@
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 20px;
+  color: #3786b6;
 }
 
 .cta-text {
@@ -119,9 +118,11 @@
 .cta-buttons {
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  justify-content: center;
   align-items: center;
+  gap: 15px;
+  max-width: 600px;
+  margin: 0 auto;
+  justify-content: center;
 }
 
 @media (min-width: 600px) {
@@ -131,28 +132,34 @@
 }
 
 .btn {
-  text-decoration: none;
+  background-color: #3786b6;
+  color: white;
   padding: 12px 24px;
-  border-radius: 6px;
-  font-weight: 600;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 16px;
+  margin: 0 10px;
 }
 
 .primary-btn {
-  background-color: #e63946;
+  background-color: #8e2273;
   color: white;
 }
 
 .primary-btn:hover {
-  background-color: #d62839;
+  background-color: #6f1a5c;
+  border: 2px solid #8e2273;
+  color: white;
 }
 
 .outline-btn {
-  border: 2px solid #e63946;
-  color: #e63946;
+  border: 2px solid #3786b6;
+  color: #3786b6;
+  background-color: transparent;
 }
 
 .outline-btn:hover {
-  background-color: #e63946;
+  background-color: #3786b6;
+  border: 2px solid #3786b6;
   color: white;
 }

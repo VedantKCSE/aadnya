@@ -3,6 +3,7 @@
     /* Custom primary/90 */
     color: rgb(0, 0, 0);
     width: 100%;
+    border-top: 2px solid #3786b6;
 }
 
 .footer-container {
@@ -10,7 +11,6 @@
     max-width: 1280px;
     margin: 0 auto;
     padding: 3rem 1rem;
-    border-top: 4px solid #000000;
 }
 
 .footer-grid {

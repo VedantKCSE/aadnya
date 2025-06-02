@@ -1,0 +1,244 @@
+.supporters-container {
+    /* padding-top: 80px; */
+    width: 100%;
+    min-height: 100vh;
+}
+
+.hero-section {
+    width: 100%;
+    /* height: 400px; */
+    background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
+    padding: 80px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    color: #3786b6;
+    margin-top: 100px;
+}
+
+.hero-description {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.support-types,
+.recognition-section,
+.thankyou-section {
+    padding: 60px 20px;
+    /* background-color: #fff; */
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #3786b6;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+}
+
+.cards-grid,
+.recognition-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    place-items: center;
+}
+
+.card {
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    background-color: #fafafa;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
+}
+
+.card-header {
+    text-align: center;
+    margin-bottom: 16px;
+}
+
+.icon-wrapper {
+    margin-bottom: 12px;
+}
+
+.icon {
+    width: 32px;
+    height: 32px;
+}
+
+.icon.primary {
+    color: #3786b6;
+}
+
+.icon.secondary {
+    color: #8e2273;
+}
+
+
+
+.card-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.card-count {
+    font-size: 1.8rem;
+    color: #3786b6;
+    font-weight: bold;
+    margin-top: 8px;
+}
+
+.card-description {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.benefits-title {
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.benefits-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+.benefit-icon {
+    margin-right: 8px;
+    color: #3786b6;
+    width: 16px;
+    height: 16px;
+}
+
+.thankyou-box {
+    background-color: #f7f7f7;
+    padding: 40px 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.thankyou-text {
+    font-size: 1rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+.thankyou-quote {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #222;
+    margin-bottom: 30px;
+
+}
+
+.button-group {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 20px auto;
+    justify-content: center;/* center the buttons */
+    flex-wrap: wrap;
+    /* max-width: 800px; */
+}
+
+.button-group .btn {
+    padding: 10px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3786b6;
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #1565c0;
+}
+
+.btn-outline {
+    border: 2px solid #3786b6;
+    color: #3786b6;
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #3786b6;
+    color: white;
+}
+
+
+/* responsive */
+
+
+
+
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .section-description {
+        font-size: 1rem;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+
+    .card-count {
+        font-size: 1.5rem;
+    }
+}

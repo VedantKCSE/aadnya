@@ -49,7 +49,13 @@ const Donate = () => {
 
         <div className="quote">
           <h2>"Charity doesn't decrease wealth"</h2>
-          <p>Every donation makes a direct impact on someone's life</p>
+          <p
+            className="
+          quote_paragraph
+          "
+          >
+            Every donation makes a direct impact on someone's life
+          </p>
         </div>
       </div>
 
@@ -155,7 +161,9 @@ const Donate = () => {
           </p>
           <p>
             <strong>Email: </strong>
-            <a href="mailto:aadnyafoundation@gmail.com">aadnyafoundation@gmail.com</a>
+            <a href="mailto:aadnyafoundation@gmail.com">
+              aadnyafoundation@gmail.com
+            </a>
           </p>
           <p>
             <strong>Website: </strong>

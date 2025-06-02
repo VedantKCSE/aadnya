@@ -10,7 +10,7 @@ import Donate from './pages/Donate'
 import Register from './pages/Register'
 import Programs from './pages/Programs'
 import About from './pages/About'
-import SupportedBy from './pages/SupportedBy'
+import Supporters from './pages/Supporters'
 
 const App = () => {
   return (
@@ -21,11 +21,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/programs" element={<Programs />} />
-        <Route path="/supported-by" element={<SupportedBy />} />
+        <Route path="/supporters" element={<Supporters />} />
         <Route path="/register" element={<Register />} />
         <Route path="/donate" element={<Donate />} />
         <Route path="/contact" element={<Contact />} />
-
       </Routes>
       <Footer />
 
