@@ -2,7 +2,6 @@ import React, { useState, useEffect, useRef } from "react";
 import "./css/banner.css";
 import carosal1 from "../img/carosal1.jpeg";
 import carosal2 from "../img/carosal2.jpeg";
-import logo from "../img/logo.png";
 import downArrow from "../img/arrow.png"; // Assuming you have a down arrow image
 import { Link } from "react-router-dom";
 import "./css/homeMisson.css"; // Import the CSS for the mission section

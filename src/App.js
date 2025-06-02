@@ -1,6 +1,6 @@
 import React from 'react'
 // react router dom
-import { BrowserRouter as Router, Route, Switch, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css' // Import your main CSS file
 import Home from './pages/Home'
 import Navbar from './component/Navbar'
