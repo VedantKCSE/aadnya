@@ -34,30 +34,62 @@ const Register = () => {
     { value: 'online', label: 'Online Support', description: 'Social media, content creation, admin support' }
   ];
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (!formData.agreeToTerms) {
       alert("Please agree to the terms and conditions to proceed.");
       return;
     }
 
-    alert("Registration Successful! Thank you for volunteering with us.");
-    setFormData({
-      fullName: '',
-      email: '',
-      phone: '',
-      age: '',
-      city: '',
-      occupation: '',
-      volunteerType: '',
-      skills: '',
-      availability: '',
-      motivation: '',
-      agreeToTerms: false
+    // Convert camelCase keys to expected field names in Apps Script
+    const payload = new URLSearchParams({
+      "Full Name": formData.fullName,
+      "Email Address": formData.email,
+      "Phone Number": formData.phone,
+      "Age": formData.age,
+      "City": formData.city,
+      "Occupation": formData.occupation,
+      "Preferred Volunteer Type": formData.volunteerType,
+      "Skills & Expertise": formData.skills,
+      "Availability": formData.availability,
+      "Why do you want to volunteer?": formData.motivation,
+      "sheet": "register" // required to route to correct handler
     });
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyAnSgvu_JewoQ4FYLR1Cf-nQiGtBibtmNdnK1V66ZT5_LuLgK9r2uDAi7iZL7Pcf7alA/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: payload.toString()
+        }
+      );
+      const text = await response.text();
+      alert(text || "Registration Successful! Thank you for volunteering with us.");
+      setFormData({
+        fullName: '',
+        email: '',
+        phone: '',
+        age: '',
+        city: '',
+        occupation: '',
+        volunteerType: '',
+        skills: '',
+        availability: '',
+        motivation: '',
+        agreeToTerms: false
+      });
+    } catch (error) {
+      alert("There was an error submitting your registration. Please try again later.");
+      console.error("Submission error:", error);
+    }
   };
 
-  const handleInputChange = (field: string, value: string | boolean) => {
+
+  const handleInputChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
   };
 

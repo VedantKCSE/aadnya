@@ -34,15 +34,44 @@ const Contact = () => {
     }
   ];
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!formData.name || !formData.email || !formData.message) {
       alert("Please fill in all required fields.");
       return;
     }
-    alert("Message sent successfully!");
-    setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+
+    // Map your formData keys to the expected field names in the Google Script
+    const payload = new URLSearchParams({
+      "Full Name": formData.name,
+      "Email Address": formData.email,
+      "Phone Number": formData.phone,
+      "Subject": formData.subject,
+      "Message": formData.message,
+      "sheet": "contact"  // sheet parameter to route data correctly
+    });
+
+    try {
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbyAnSgvu_JewoQ4FYLR1Cf-nQiGtBibtmNdnK1V66ZT5_LuLgK9r2uDAi7iZL7Pcf7alA/exec?sheet=contact",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded"
+          },
+          body: payload.toString()
+        }
+      );
+      const text = await response.text();
+      alert(text || "Message sent successfully!");
+      setFormData({ name: '', email: '', phone: '', subject: '', message: '' });
+    } catch (error) {
+      alert("There was an error submitting your message. Please try again later.");
+      console.error("Submission error:", error);
+    }
   };
+
 
   const handleInputChange = (field, value) => {
     setFormData(prev => ({ ...prev, [field]: value }));
