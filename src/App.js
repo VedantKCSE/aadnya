@@ -10,6 +10,7 @@ import Donate from './pages/Donate'
 import Register from './pages/Register'
 import Programs from './pages/Programs'
 import About from './pages/About'
+import Gallary from './pages/Gallary.jsx'
 import Supporters from './pages/Supporters'
 
 const App = () => {
@@ -20,6 +21,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
+        <Route path="/gallary" element={<Gallary />} />
         <Route path="/programs" element={<Programs />} />
         <Route path="/supporters" element={<Supporters />} />
         <Route path="/register" element={<Register />} />
