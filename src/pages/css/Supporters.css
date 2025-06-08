@@ -1,12 +1,10 @@
 .supporters-container {
-    /* padding-top: 80px; */
     width: 100%;
     min-height: 100vh;
 }
 
 .hero-section {
     width: 100%;
-    /* height: 400px; */
     background: linear-gradient(to bottom right, #e3f2fd, #fce4ec);
     padding: 80px 20px;
     text-align: center;
@@ -34,9 +32,9 @@
 
 .support-types,
 .recognition-section,
-.thankyou-section {
+.thankyou-section,
+.company-support-section {
     padding: 60px 20px;
-    /* background-color: #fff; */
     width: 80%;
     margin: 0 auto;
     text-align: center;
@@ -99,8 +97,6 @@
     color: #8e2273;
 }
 
-
-
 .card-title {
     font-size: 1.2rem;
     font-weight: 600;
@@ -117,31 +113,6 @@
 .card-description {
     color: #666;
     font-size: 0.95rem;
-}
-
-.benefits-title {
-    font-weight: bold;
-    margin-bottom: 8px;
-    color: #333;
-}
-
-.benefits-list {
-    list-style: none;
-    padding-left: 0;
-}
-
-.benefit-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 6px;
-    color: #555;
-}
-
-.benefit-icon {
-    margin-right: 8px;
-    color: #3786b6;
-    width: 16px;
-    height: 16px;
 }
 
 .thankyou-box {
@@ -164,7 +135,6 @@
     font-style: italic;
     color: #222;
     margin-bottom: 30px;
-
 }
 
 .button-group {
@@ -172,9 +142,8 @@
     gap: 12px;
     align-items: center;
     margin: 20px auto;
-    justify-content: center;/* center the buttons */
+    justify-content: center;
     flex-wrap: wrap;
-    /* max-width: 800px; */
 }
 
 .button-group .btn {
@@ -207,12 +176,32 @@
     color: white;
 }
 
+/* Supporting Companies Styles */
+.company-logos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 30px;
+    place-items: center;
+}
 
-/* responsive */
+.company-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    color: #444;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
 
+.company-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-3px);
+}
 
-
-
+/* Responsive */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
