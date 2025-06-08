@@ -1,7 +1,11 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./css/banner.css";
-import carosal1 from "../img/carosal1.jpeg";
-import carosal2 from "../img/carosal2.jpeg";
+import carosal1 from "../img/images/carosal3.jpg";
+import carosal2 from "../img/images/carosal2.jpg";
+import carosal3 from "../img/images/carosal1.jpg";
+import carosal4 from "../img/images/carosal4.jpg";
+import carosal5 from "../img/images/carosal5.jpg";
+// import carosal2 from "../img/carosal2.jpeg";
 import downArrow from "../img/arrow.png"; // Assuming you have a down arrow image
 import { Link } from "react-router-dom";
 import "./css/homeMisson.css"; // Import the CSS for the mission section
@@ -85,7 +89,7 @@ const FadeInSection = ({ children }) => {
 };
 
 const Home = () => {
-  const items = [carosal1, carosal2];
+  const items = [carosal1, carosal2,carosal3,carosal4,carosal5];
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -156,6 +160,7 @@ const Home = () => {
           </a>
         </div>
       </section>
+
       <FadeInSection>
         <section className="mission-section" id="about">
           <div className="mission-container">
