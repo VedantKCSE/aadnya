@@ -29,7 +29,7 @@ const Supporters = () => {
         </div>
         <div className="supporter-cards">
           <div className="supporter-card company">
-            <p>US Pune Labs</p>
+            <p>US Labs Pune</p>
             <h3>Company</h3>
           </div>
           <div className="supporter-card donor">
