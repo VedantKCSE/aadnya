@@ -6,7 +6,6 @@ import carosal3 from "../img/images/carosal1.jpg";
 import carosal4 from "../img/images/carosal4.jpg";
 import carosal5 from "../img/images/carosal5.jpg";
 // import carosal2 from "../img/carosal2.jpeg";
-import downArrow from "../img/arrow.png"; // Assuming you have a down arrow image
 import { Link } from "react-router-dom";
 import "./css/homeMisson.css"; // Import the CSS for the mission section
 import "./css/homeAbout.css"; // Import the CSS for the home page
@@ -120,16 +119,13 @@ const Home = () => {
         </div>
 
         <header className="banner_content">
-          <h2 className="tagline">Give hope. Create change.</h2>
+         
 
           <h1 className="banner_heading">
             <span>CHARITY</span> DOESN'T <span>DECREASE</span> WEALTH
           </h1>
 
-          <p>
-            "Charity is not about giving what you have left over; it’s about
-            sharing what you have with those who need it most."
-          </p>
+          
 
           <nav className="buttons" aria-label="Call to action">
             <button
@@ -147,18 +143,7 @@ const Home = () => {
           </nav>
         </header>
 
-        <div className="down_arrow" aria-hidden="true">
-          {/* <a href="#about" aria-label="Scroll to About Section">
-            <img src={downArrow} alt="" className="arrow_icon" />
-          </a> */}
-          <a
-            href="#about"
-            className="down_arrow"
-            aria-label="Scroll to About Section"
-          >
-            <img src={downArrow} alt="Scroll Down" className="arrow_icon" />
-          </a>
-        </div>
+        
       </section>
 
       <FadeInSection>
