@@ -119,31 +119,27 @@ const Home = () => {
         </div>
 
         <header className="banner_content">
-         
-
           <h1 className="banner_heading">
             <span>CHARITY</span> DOESN'T <span>DECREASE</span> WEALTH
           </h1>
 
-          
-
           <nav className="buttons" aria-label="Call to action">
-            <button
+            <Link
+              to="/donate"
               className="btn btn-primary attention"
               aria-label="Donate Now - help those in need"
             >
               💖 Donate Now 🌟
-            </button>
-            <button
+            </Link>
+            <Link
+              to="/register"
               className="btn btn-secondary"
               aria-label="Join as Volunteer"
             >
               🙌 Register as Volunteer
-            </button>
+            </Link>
           </nav>
         </header>
-
-        
       </section>
 
       <FadeInSection>

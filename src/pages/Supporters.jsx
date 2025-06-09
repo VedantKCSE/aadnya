@@ -42,51 +42,55 @@ const Supporters = () => {
         </div>
       </section>
 
-      {/* Support Types */}
-      <section className="support-types">
+      {/* Company & Individual Donor Section */}
+      <section className="company-donor-section">
         <div className="text-center">
-          <h2 className="section-title">Who Supports Us</h2>
+          <h2 className="section-title">Our Valued Supporters</h2>
           <p className="section-description">
-            Our work is made possible by a diverse community of supporters who
-            share our vision of a more inclusive and compassionate society.
+            We are proud to be supported by these key partners and donors.
           </p>
         </div>
-
-        <div className="cards-grid">
-          {supportTypes.map((type, index) => (
-            <div key={index} className="card">
-              <div className="card-header">
-                <div className="icon-wrapper">{type.icon}</div>
-                <h3 className="card-title">{type.title}</h3>
-                <div className="card-count">{type.count}</div>
-              </div>
-              <div className="card-content">
-                <p className="card-description">{type.description}</p>
-              </div>
-            </div>
-          ))}
+        <div className="supporter-cards">
+          <div className="supporter-card company">
+            <p>US Pune Labs</p>
+            <h3>Company</h3>
+          </div>
+          <div className="supporter-card donor">
+            <p>Lalit Sethi (Raver, Jalgaon)</p>
+            <h3>Individual Donor</h3>
+          </div>
         </div>
       </section>
 
-      {/* Supporting Companies */}
-      <section className="company-support-section">
+      {/* Volunteer Chips Section */}
+      <section className="volunteer-list-section">
         <div className="text-center">
-          <h2 className="section-title">Our Supporting Companies</h2>
+          <h2 className="section-title">Our Dedicated Community Volunteers</h2>
           <p className="section-description">
-            We deeply value the support of companies that share our mission and
-            stand with us.
+            Meet the incredible individuals who generously give their time and
+            energy to our cause.
           </p>
         </div>
-        <div className="company-logos-grid">
+
+        <div className="volunteer-grid">
           {[
-            "Acme Corp",
-            "BrightTech",
-            "GreenEarth Inc",
-            "Nova Systems",
-            "Zenith Ltd",
-          ].map((company, index) => (
-            <div key={index} className="company-card">
-              {company}
+            "Mann Santosh Wani",
+            "Tanishka Dnyaneshwar Ubhe",
+            "Divyam Viral Shah",
+            "Amogh Shivaji Thube",
+            "Aman Arora",
+            "Dev Satish Somani",
+            "Atharva Pandurang Pawar",
+            "Shaunak Rajesh Dahibhate",
+            "Atharva Pawar",
+            "Raghav Hemant Kulkarni",
+            "Sonawane Om Ratnakar",
+            "Rohan Vaibhav Bhagat",
+            "Rayan Nozer Tarapore",
+            "Saurav Kumbar",
+          ].map((volunteer, index) => (
+            <div key={index} className="volunteer-card">
+              {volunteer}
             </div>
           ))}
         </div>
@@ -106,7 +110,7 @@ const Supporters = () => {
             "Your support can turn loneliness into a story of hope and love"
           </blockquote>
           <div className="button-group">
-            <Link to="/donate" className="btn btn-primary">
+            <Link to="/register" className="btn btn-primary">
               Join Our Supporters
             </Link>
             <Link to="/contact" className="btn btn-outline">
