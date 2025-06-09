@@ -1,32 +1,9 @@
 import React from "react";
 import "./css/Supporters.css";
-import { Heart, Users, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Supporters = () => {
-  const supportTypes = [
-    {
-      title: "Individual Donors",
-      description:
-        "Compassionate individuals who believe in our mission and contribute regularly to support our programs.",
-      icon: <Heart className="icon secondary" />,
-      count: "50+",
-    },
-    {
-      title: "Corporate Partners",
-      description:
-        "Forward-thinking organizations that partner with us through CSR initiatives and employee engagement programs.",
-      icon: <Users className="icon primary" />,
-      count: "10+",
-    },
-    {
-      title: "Community Volunteers",
-      description:
-        "Dedicated volunteers who contribute their time, skills, and energy to help us serve our communities better.",
-      icon: <CheckCircle className="icon accent" />,
-      count: "100+",
-    },
-  ];
+ 
 
   return (
     <div className="supporters-container">
