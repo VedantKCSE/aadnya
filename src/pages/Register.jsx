@@ -8,6 +8,8 @@ import {
   CalendarCheck,
   Globe,
 } from "lucide-react";
+import { toast, ToastContainer } from "react-toastify";
+
 
 
 const Register = () => {
@@ -25,6 +27,9 @@ const Register = () => {
     agreeToTerms: false
   });
 
+  const [loading, setLoading] = useState(false);
+
+
   const volunteerTypes = [
     { value: 'field', label: 'Field Volunteer', description: 'Direct interaction with beneficiaries' },
     { value: 'fundraising', label: 'Fundraising', description: 'Help raise funds and resources' },
@@ -36,24 +41,26 @@ const Register = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
     if (!formData.agreeToTerms) {
-      alert("Please agree to the terms and conditions to proceed.");
+      toast.warning("Please agree to the terms and conditions to proceed.");
       return;
     }
 
-    // Convert camelCase keys to expected field names in Apps Script
+    setLoading(true);
+
     const payload = new URLSearchParams({
       "Full Name": formData.fullName,
       "Email Address": formData.email,
       "Phone Number": formData.phone,
-      "Age": formData.age,
-      "City": formData.city,
-      "Occupation": formData.occupation,
+      Age: formData.age,
+      City: formData.city,
+      Occupation: formData.occupation,
       "Preferred Volunteer Type": formData.volunteerType,
       "Skills & Expertise": formData.skills,
-      "Availability": formData.availability,
+      Availability: formData.availability,
       "Why do you want to volunteer?": formData.motivation,
-      "sheet": "register" // required to route to correct handler
+      sheet: "register",
     });
 
     try {
@@ -62,31 +69,39 @@ const Register = () => {
         {
           method: "POST",
           headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
+            "Content-Type": "application/x-www-form-urlencoded",
           },
-          body: payload.toString()
+          body: payload.toString(),
         }
       );
       const text = await response.text();
-      alert(text || "Registration Successful! Thank you for volunteering with us.");
+      toast.success(
+        text || "Registration Successful! Thank you for volunteering."
+      );
+
       setFormData({
-        fullName: '',
-        email: '',
-        phone: '',
-        age: '',
-        city: '',
-        occupation: '',
-        volunteerType: '',
-        skills: '',
-        availability: '',
-        motivation: '',
-        agreeToTerms: false
+        fullName: "",
+        email: "",
+        phone: "",
+        age: "",
+        city: "",
+        occupation: "",
+        volunteerType: "",
+        skills: "",
+        availability: "",
+        motivation: "",
+        agreeToTerms: false,
       });
     } catch (error) {
-      alert("There was an error submitting your registration. Please try again later.");
+      toast.error(
+        "There was an error submitting your registration. Please try again later."
+      );
       console.error("Submission error:", error);
+    } finally {
+      setLoading(false);
     }
   };
+  
 
 
   const handleInputChange = (field, value) => {
@@ -268,12 +283,14 @@ const Register = () => {
               </label>
             </div>
 
-            <button type="submit" className="submit-button">
-              🤝 Register as Volunteer
+            <button type="submit" className="submit-button" disabled={loading}>
+              {loading ? "Submitting..." : "🤝 Register as Volunteer"}
             </button>
           </form>
         </div>
       </section>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };

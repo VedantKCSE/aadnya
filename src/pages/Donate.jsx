@@ -5,6 +5,8 @@ import "./css/Donate/Donate3.css";
 import "./css/Donate/Donate4.css";
 import charity from "../img/charity.png";
 import qr from "../img/qr.png";
+import { toast, ToastContainer } from "react-toastify";
+
 
 const Donate = () => {
   const presetAmounts = [500, 1000, 2500, 5000, 10000];
@@ -48,13 +50,15 @@ const Donate = () => {
     e.preventDefault();
     const donation = getDonationValue();
     if (donation <= 0) {
-      alert("Please enter or select a valid donation amount.");
+      toast.error("Please enter or select a valid donation amount.");
       return;
     }
+
     if (!formData.fullName || !formData.email) {
-      alert("Please fill in all required fields.");
+      toast.error("Please fill in all required fields.");
       return;
     }
+    
     setSubmitted(true);
 
     // Prepare payload with proper keys expected by your Apps Script
@@ -80,7 +84,8 @@ const Donate = () => {
         }
       );
       const text = await response.text();
-      alert(text || "Thank you for your donation!");
+      toast.success(text || "Thank you for your donation!");
+
       // Reset form
       setFormData({
         fullName: "",
@@ -92,9 +97,10 @@ const Donate = () => {
       setSelectedAmount(null);
       setCustomAmount("");
     } catch (error) {
-      alert(
+      toast.error(
         "There was an error submitting your donation. Please try again later."
       );
+
       console.error("Submission error:", error);
     } finally {
       setSubmitted(false);
@@ -270,6 +276,8 @@ const Donate = () => {
           </p>
         </div>
       </div>
+
+      <ToastContainer position="top-right" autoClose={3000} />
     </div>
   );
 };
