@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { X, ChevronLeft, ChevronRight, ZoomIn } from "lucide-react";
 import "./css/Gallary.css";
+
+import img0 from "../img/1 (1).jpg";
+import img01 from "../img/1 (2).jpg";
+import img02 from "../img/1 (3).jpg";
+import img03 from "../img/1 (4).jpg";
+import img04 from "../img/1 (5).jpg";
+import img05 from "../img/1 (6).jpg";
 import img1 from "../img/images/IMG-20250607-WA0005.jpg";
 import img2 from "../img/images/IMG-20250607-WA0006.jpg";
 import img3 from "../img/images/IMG-20250607-WA0010.jpg";
@@ -17,7 +24,13 @@ const Gallery = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const images = [
-    { src: img1, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img01, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img02, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img03, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img04, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img05, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img0, alt: "Foundation Image 1", title: "Community Outreach" },
+    { src: img1, alt: "Foundation Image 2", title: "Helping Hands" },
     { src: img2, alt: "Foundation Image 2", title: "Helping Hands" },
     { src: img3, alt: "Foundation Image 3", title: "Making a Difference" },
     { src: img4, alt: "Foundation Image 4", title: "Together We Grow" },

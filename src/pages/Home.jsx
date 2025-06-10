@@ -5,6 +5,7 @@ import carosal2 from "../img/images/carosal2.jpg";
 import carosal3 from "../img/images/carosal1.jpg";
 import carosal4 from "../img/images/carosal4.jpg";
 import carosal5 from "../img/images/carosal5.jpg";
+import carosal6 from "../img/1 (1).jpg";
 // import carosal2 from "../img/carosal2.jpeg";
 import { Link } from "react-router-dom";
 import "./css/homeMisson.css"; // Import the CSS for the mission section
